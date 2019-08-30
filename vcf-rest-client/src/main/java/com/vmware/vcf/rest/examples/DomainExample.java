@@ -30,6 +30,18 @@ public class DomainExample {
     this.client = new Client();
   }
 
+  /**
+   * Poll for Domain Creation Validation
+   *
+   * @param id
+   * @return
+   * @throws InterruptedException
+   * @throws UnsupportedOperationException
+   * @throws IOException
+   * @throws KeyManagementException
+   * @throws NoSuchAlgorithmException
+   * @throws KeyStoreException
+   */
   public boolean pollDomainCreationValidation(String id)
       throws InterruptedException, UnsupportedOperationException, IOException,
           KeyManagementException, NoSuchAlgorithmException, KeyStoreException {
@@ -62,6 +74,17 @@ public class DomainExample {
     return isValidationSuccessful;
   }
 
+  /**
+   * Poll for Domain Creation
+   *
+   * @param id
+   * @return
+   * @throws InterruptedException
+   * @throws KeyManagementException
+   * @throws NoSuchAlgorithmException
+   * @throws KeyStoreException
+   * @throws IOException
+   */
   private String pollDomainCreation(String id)
       throws InterruptedException, KeyManagementException, NoSuchAlgorithmException,
           KeyStoreException, IOException {
@@ -83,6 +106,17 @@ public class DomainExample {
     return status;
   }
 
+  /**
+   * Validate a domain spec
+   *
+   * @param domainSpec
+   * @return
+   * @throws KeyManagementException
+   * @throws NoSuchAlgorithmException
+   * @throws KeyStoreException
+   * @throws IOException
+   * @throws InterruptedException
+   */
   public boolean validateDomainCreation(String domainSpec)
       throws KeyManagementException, NoSuchAlgorithmException, KeyStoreException, IOException,
           InterruptedException {
@@ -110,6 +144,17 @@ public class DomainExample {
     return validated;
   }
 
+  /**
+   * Create a workload domain
+   *
+   * @param domainSpec
+   * @throws UnsupportedOperationException
+   * @throws IOException
+   * @throws KeyManagementException
+   * @throws NoSuchAlgorithmException
+   * @throws KeyStoreException
+   * @throws InterruptedException
+   */
   public void createDomain(String domainSpec)
       throws UnsupportedOperationException, IOException, KeyManagementException,
           NoSuchAlgorithmException, KeyStoreException, InterruptedException {

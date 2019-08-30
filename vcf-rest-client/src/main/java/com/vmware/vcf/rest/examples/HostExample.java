@@ -30,6 +30,18 @@ public class HostExample {
     this.client = new Client();
   }
 
+  /**
+   * Poll For Host validation
+   *
+   * @param id
+   * @return Validation Status
+   * @throws InterruptedException
+   * @throws UnsupportedOperationException
+   * @throws IOException
+   * @throws KeyManagementException
+   * @throws NoSuchAlgorithmException
+   * @throws KeyStoreException
+   */
   public boolean pollHostValidation(String id)
       throws InterruptedException, UnsupportedOperationException, IOException,
           KeyManagementException, NoSuchAlgorithmException, KeyStoreException {
@@ -62,6 +74,18 @@ public class HostExample {
     return isValidationSuccessful;
   }
 
+  /**
+   * Poll For Host commission
+   *
+   * @param id
+   * @return
+   * @throws InterruptedException
+   * @throws UnsupportedOperationException
+   * @throws IOException
+   * @throws KeyManagementException
+   * @throws NoSuchAlgorithmException
+   * @throws KeyStoreException
+   */
   public String pollHostCommission(String id)
       throws InterruptedException, UnsupportedOperationException, IOException,
           KeyManagementException, NoSuchAlgorithmException, KeyStoreException {
@@ -82,6 +106,16 @@ public class HostExample {
     return status;
   }
 
+  /**
+   * Validate Host commission spec
+   *
+   * @param hostsSpec
+   * @throws KeyManagementException
+   * @throws NoSuchAlgorithmException
+   * @throws KeyStoreException
+   * @throws IOException
+   * @throws InterruptedException
+   */
   public void validateHosts(String hostsSpec)
       throws KeyManagementException, NoSuchAlgorithmException, KeyStoreException, IOException,
           InterruptedException {
@@ -102,6 +136,17 @@ public class HostExample {
     }
   }
 
+  /**
+   * Commission Hosts
+   *
+   * @param hostsSpec
+   * @throws KeyManagementException
+   * @throws NoSuchAlgorithmException
+   * @throws KeyStoreException
+   * @throws IOException
+   * @throws UnsupportedOperationException
+   * @throws InterruptedException
+   */
   public void commissionHosts(String hostsSpec)
       throws KeyManagementException, NoSuchAlgorithmException, KeyStoreException, IOException,
           UnsupportedOperationException, InterruptedException {
