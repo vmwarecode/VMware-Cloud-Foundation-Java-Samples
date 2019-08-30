@@ -1,0 +1,26 @@
+[
+	{
+		"fqdn": "esxi-5.vrack.vsphere.local",
+		"username": "root",
+		"password": "EvoSddc!2016",
+		"storageType": "VSAN",
+		"networkPoolId": "b671edf8-103a-4e6e-bc84-ed06fd96758f",
+		"networkPoolName": "bringup-networkpool"
+	},
+	{
+		"fqdn": "esxi-6.vrack.vsphere.local",
+		"username": "root",
+		"password": "EvoSddc!2016",
+		"storageType": "VSAN",
+		"networkPoolId": "b671edf8-103a-4e6e-bc84-ed06fd96758f",
+		"networkPoolName": "bringup-networkpool"
+	},
+	{
+		"fqdn": "esxi-7.vrack.vsphere.local",
+		"username": "root",
+		"password": "EvoSddc!2016",
+		"storageType": "VSAN",
+		"networkPoolId": "b671edf8-103a-4e6e-bc84-ed06fd96758f",
+		"networkPoolName": "bringup-networkpool"
+	}
+]
