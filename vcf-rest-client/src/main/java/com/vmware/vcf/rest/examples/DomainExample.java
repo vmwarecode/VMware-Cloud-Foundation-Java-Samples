@@ -144,6 +144,5 @@ public class DomainExample {
             Files.readAllBytes(
                 Paths.get(ClassLoader.getSystemResource("add_domain.json").toURI())));
     domainEx.createDomain(domainSpec);
-    // domainEx.pollDomainCreation("ef58ed0e-e5b0-43f4-8109-a1a8a04cbb54");
   }
 }
