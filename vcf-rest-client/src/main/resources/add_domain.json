@@ -1,0 +1,92 @@
+{
+  "domainName" : "Workload-Domain-2",
+  "vcenterSpec" : {
+    "name" : "vCenter1",
+    "networkDetailsSpec" : {
+      "ipAddress" : "10.0.0.43",
+      "dnsName" : "vcenter-2.vrack.vsphere.local",
+      "gateway" : "10.0.0.250",
+      "subnetMask" : "255.255.255.0"
+    },
+    "rootPassword" : "VMware123!",
+    "datacenterName" : "new-vi-1"
+  },
+  "computeSpec" : {
+    "clusterSpecs" : [ {
+      "name" : "Cluster1",
+      "hostSpecs" : [ {
+        "id" : "e27caa41-e33e-4da3-be26-696f5db71953",
+        "hostNetworkSpec" : {
+          "vmNics" : [ {
+            "id" : "vmnic1",
+            "vdsName" : "SDDC-Dswitch-Private1"
+          } ]
+        }
+      }, {
+        "id" : "8db9d731-6978-45b2-b9e1-74f77facdc25",
+        "hostNetworkSpec" : {
+          "vmNics" : [ {
+            "id" : "vmnic1",
+            "vdsName" : "SDDC-Dswitch-Private1"
+          } ]
+        }
+      }, {
+        "id" : "1f97d515-19ea-46bb-b1cd-c9d65757a907",
+        "hostNetworkSpec" : {
+          "vmNics" : [ {
+            "id" : "vmnic1",
+            "vdsName" : "SDDC-Dswitch-Private1"
+          } ]
+        }
+      } ],
+      "datastoreSpec" : {
+        "vsanDatastoreSpec" : {
+          "failuresToTolerate" : 1,
+          "licenseKey" : "AAAAA-BBBBB-CCCCC-DDDDD-EEEEE",
+          "datastoreName" : "vSanDatastore"
+        }
+      },
+      "networkSpec" : {
+        "vdsSpecs" : [ {
+          "name" : "SDDC-Dswitch-Private1",
+          "portGroupSpecs" : [ {
+            "name" : "SDDC-DPortGroup-Mgmt",
+            "transportType" : "MANAGEMENT"
+          }, {
+            "name" : "SDDC-DPortGroup-VSAN",
+            "transportType" : "VSAN"
+          }, {
+            "name" : "SDDC-DPortGroup-vMotion",
+            "transportType" : "VMOTION"
+          } ]
+        } ],
+        "nsxClusterSpec" : {
+          "nsxVClusterSpec" : {
+            "vlanId" : 0,
+            "vdsNameForVxlanConfig" : "SDDC-Dswitch-Private1"
+          }
+        }
+      }
+    } ]
+  },
+  "nsxVSpec" : {
+    "nsxManagerSpec" : {
+      "name" : "nsx-manager-2",
+      "networkDetailsSpec" : {
+        "ipAddress" : "10.0.0.44",
+        "dnsName" : "nsx-manager-2.vrack.vsphere.local",
+        "gateway" : "10.0.0.250",
+        "subnetMask" : "255.255.255.0"
+      }
+    },
+    "nsxVControllerSpec" : {
+      "nsxControllerIps" : [ "10.0.0.45", "10.0.0.46", "10.0.0.47" ],
+      "nsxControllerPassword" : "EvoSddc!2016",
+      "nsxControllerGateway" : "10.0.0.250",
+      "nsxControllerSubnetMask" : "255.255.255.0"
+    },
+    "licenseKey" : "AAAAA-BBBBB-CCCCC-DDDDD-EEEEE",
+    "nsxManagerAdminPassword" : "EvoSddc!2016",
+    "nsxManagerEnablePassword" : "EvoSddc!2016"
+  }
+}
